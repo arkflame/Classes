@@ -4,7 +4,7 @@ author: ${author}
 main: ${mainClass}
 version: ${version}
 url: ${url}
+softdepend: [PlaceholderAPI, Teams]
 commands:
-  example:
-    aliases: ["ex"]
-    description: "This is an example plugin."
+  classes:
+    aliases: [bard]
