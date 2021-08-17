@@ -30,9 +30,9 @@ public class TaskTimer {
     this.effectMap.put(Material.RABBIT_FOOT, new PotionEffect(PotionEffectType.JUMP, 100, 1));
     this.effectMap.put(Material.INK_SACK, new PotionEffect(PotionEffectType.INVISIBILITY, 100, 0));
     server.getScheduler().runTaskTimer(plugin, () -> {
-          for (Player player : paramServer.getOnlinePlayers())
-            runTask(paramClassPlayerManager, player); 
-        }20L, 20L);
+          for (Player player : server.getOnlinePlayers())
+            runTask(classPlayerManager, player); 
+        }, 20L, 20L);
   }
   
   private ClassType getArmor(Player player) {

@@ -1,12 +1,12 @@
 package dev._2lstudios.classes.placeholders;
 
-import me.clip.placeholderapi.PlaceholderAPI;
-import me.clip.placeholderapi.expansion.PlaceholderExpansion;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
+
 import dev._2lstudios.classes.enums.ClassType;
 import dev._2lstudios.classes.managers.ClassPlayerManager;
 import dev._2lstudios.classes.plugin.ClassPlayer;
+import me.clip.placeholderapi.expansion.PlaceholderExpansion;
 
 public class ClassesPlaceholders extends PlaceholderExpansion {
   private final Plugin plugin;
@@ -18,12 +18,8 @@ public class ClassesPlaceholders extends PlaceholderExpansion {
     this.classPlayerManager = classPlayerManager;
   }
   
-  public void unregister() {
-    PlaceholderAPI.unregisterPlaceholderHook(getIdentifier());
-  }
-  
   public String getIdentifier() {
-    return "classes";
+    return "Classes";
   }
   
   public String getAuthor() {
