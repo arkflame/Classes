@@ -13,7 +13,7 @@ import dev._2lstudios.classes.enums.ClassType;
 import dev._2lstudios.classes.managers.ClassPlayerManager;
 import dev._2lstudios.classes.utils.BukkitUtil;
 import dev._2lstudios.teams.Teams;
-import dev._2lstudios.teams.managers.TPlayerManager;
+import dev._2lstudios.teams.managers.TeamPlayerManager;
 
 public class ClassPlayer {
   private final Player player;
@@ -130,7 +130,7 @@ public class ClassPlayer {
     Location location = this.player.getLocation();
     PotionEffectType potionEffectType = potionEffect.getType();
     ClassPlayerManager classPlayerManager = Classes.getClassPlayerManager();
-    TPlayerManager tPlayerManager = Teams.getTeamsManager().getTPlayerManager();
+    TeamPlayerManager tPlayerManager = Teams.getTeamsManager().getTeamPlayerManager();
     String team = tPlayerManager.getPlayer(this.player.getName()).getTeam();
     boolean isPositive = (potionEffectType != PotionEffectType.WITHER && 
       potionEffectType != PotionEffectType.POISON && potionEffectType != PotionEffectType.WEAKNESS);
